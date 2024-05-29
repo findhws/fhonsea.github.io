@@ -7,7 +7,8 @@ let interactionBtn = document.querySelector('.ar-interaction .text a');
 console.log(biologicalList);
 carouselList.forEach((carousel, index) => {
     carousel.addEventListener('click', (event) => {
-        biologicalList[index].style.display = 'flex';
+        let itemIndex = carousel.getAttribute('data-index');
+        biologicalList[itemIndex-1].style.display = 'flex';
     });
 });
 
